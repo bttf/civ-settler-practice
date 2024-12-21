@@ -1,4 +1,4 @@
-import { Tile } from "./types";
+import { Tile } from "@/lib/types";
 
 export default function HexTooltip({
   tile,
@@ -20,6 +20,13 @@ export default function HexTooltip({
       <div>{tile.totalYields.production} production</div>
       <div>
         ({tile.position.x}, {tile.position.y})
+      </div>
+      <div>
+        River edges:{" "}
+        {Object.keys(tile.riverEdges)
+          // @ts-expect-error stfu
+          .filter((edge) => tile.riverEdges[edge])
+          .join(", ")}
       </div>
     </div>
   );
