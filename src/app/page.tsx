@@ -2,8 +2,8 @@ import HexMap from "./HexMap";
 import generateRandomTileMap from "./generateRandomTilemap";
 export default function Home() {
   const tileMap = generateRandomTileMap({
-    rows: 8,
-    cols: 16,
+    rows: 6,
+    cols: 12,
   });
   return (
     <div className="h-full flex flex-col p-4 gap-y-4">
